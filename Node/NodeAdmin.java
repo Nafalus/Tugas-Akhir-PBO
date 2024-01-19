@@ -1,20 +1,20 @@
 package Node;
 
 public class NodeAdmin {
-    private String email;
+    private String nama;
     private String password;
 
-    public NodeAdmin (String email, String password){
-        this.email = email;
+    public NodeAdmin (String nama, String password){
+        this.nama = nama;
         this.password = password;
     }
 
-    public void setEmail (String email){
-        this.email = email;
+    public void setNama (String nama){
+        this.nama = nama;
     }
 
-    public String getEmail (){
-        return this.email;
+    public String getNama (){
+        return this.nama;
     }
 
     public void setPassword (String password){

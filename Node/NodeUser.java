@@ -6,9 +6,19 @@ import java.util.ArrayList;
 import java.util.Locale;
 
 public class NodeUser extends NodeAdmin {
-    
-    public NodeUser (String email, String password){
-        super(email, password);
+    ArrayList<Transaksi> listTransaksi;
+
+    public NodeUser (String nama, String password){
+        super(nama, password);
+        this.listTransaksi = new ArrayList<>();
+    }
+
+    public void addTransaksi (Transaksi transaksi){
+        this.listTransaksi.add(transaksi);
+    }
+
+    public ArrayList<Transaksi> getAllTransaksi (){
+        return this.listTransaksi;
     }
 
     public static class Transaksi {
