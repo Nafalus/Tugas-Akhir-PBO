@@ -8,8 +8,8 @@ import java.util.Locale;
 public class NodeUser extends NodeAdmin {
     ArrayList<Transaksi> listTransaksi;
 
-    public NodeUser (String nama, String password){
-        super(nama, password);
+    public NodeUser (String nama, String pass){
+        super(nama, pass);
         this.listTransaksi = new ArrayList<>();
     }
 

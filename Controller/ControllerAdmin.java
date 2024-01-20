@@ -10,7 +10,7 @@ public class ControllerAdmin {
         this.modelAdmin = modelAdmin;
     }
 
-    public void insertAdmin (String nama, String password){
-        modelAdmin.addAdmin(new NodeAdmin(nama, password));
+    public void insertAdmin (String nama, String pass){
+        modelAdmin.addAdmin(new NodeAdmin(nama, pass));
     }
 }

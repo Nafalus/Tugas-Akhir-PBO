@@ -2,11 +2,11 @@ package Node;
 
 public class NodeAdmin {
     private String nama;
-    private String password;
+    private String pass;
 
-    public NodeAdmin (String nama, String password){
+    public NodeAdmin (String nama, String pass){
         this.nama = nama;
-        this.password = password;
+        this.pass = pass;
     }
 
     public void setNama (String nama){
@@ -17,11 +17,11 @@ public class NodeAdmin {
         return this.nama;
     }
 
-    public void setPassword (String password){
-        this.password = password;
+    public void setPassword (String pass){
+        this.pass = pass;
     }
 
     public String getPassword(){
-        return this.password;
+        return this.pass;
     }
 }

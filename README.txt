@@ -1,6 +1,3 @@
-- Struktur Data (In Progress)
-- MVC (In Progress)
-
 - Fitur -
 1. Login Admin
 2. Admin dapat menambahkan Film yang tayang (Film, Jam tayang, Studio)
