@@ -20,7 +20,22 @@ public class ControllerUser {
         modelUser.addUser(new NodeUser(nama, pass));
     }
 
-    public void updateUser (){
+    public void updateUser (String nama, String pass){
+        NodeUser user = modelUser.searchUser(nama);
+        if (user == null){
+            System.out.println("!!! Pengguna Tidak Di-Temukan !!!");
+        } else {
+            user.setPassword(pass);
+            modelUser.updateUser(user);
+        }
+    }
 
+    public void deleteUser (String nama){
+        NodeUser user = modelUser.searchUser(nama);
+        if (user == null) {
+            System.out.println("!!! Penguna tidak Di-Temukan !!!");
+        } else {
+            modelUser.deleteUser(user);
+        }
     }
 }

@@ -41,6 +41,11 @@ public class ModelUser {
         Commit();
     }
 
+    public void deleteUser (NodeUser user){
+        listUser.remove(user);
+        Commit();
+    }
+
     private void loadData (){
         this.listUser = modelGSONUser.readFromFile(new TypeToken<ArrayList<NodeUser>>(){}.getType());
     }

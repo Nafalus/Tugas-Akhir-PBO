@@ -8,9 +8,11 @@ public class Main {
     public static void main(String[] args) {
         ModelAdmin modelAdmin = new ModelAdmin();
         ModelUser modelUser = new ModelUser();
+        ModelStudio modelStudio = new ModelStudio();
         ControllerAdmin controllerAdmin = new ControllerAdmin(modelAdmin);
         ControllerUser controllerUser = new ControllerUser(modelUser);
-        ViewAdmin viewAdmin = new ViewAdmin();
+        ControllerStudio controllerStudio = new ControllerStudio(modelStudio);
+        ViewAdmin viewAdmin = new ViewAdmin(controllerStudio);
         ViewUser viewUser = new ViewUser();
         ControllerLogin controllerLogin = new ControllerLogin(viewAdmin, viewUser);
         ViewDaftar viewDaftar = new ViewDaftar(controllerUser);
