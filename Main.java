@@ -12,8 +12,8 @@ public class Main {
         ControllerAdmin controllerAdmin = new ControllerAdmin(modelAdmin);
         ControllerUser controllerUser = new ControllerUser(modelUser);
         ControllerStudio controllerStudio = new ControllerStudio(modelStudio);
-        ViewAdmin viewAdmin = new ViewAdmin(controllerStudio);
-        ViewUser viewUser = new ViewUser();
+        ViewAdmin viewAdmin = new ViewAdmin(controllerStudio, controllerUser);
+        ViewUser viewUser = new ViewUser(controllerUser, controllerStudio);
         ControllerLogin controllerLogin = new ControllerLogin(viewAdmin, viewUser);
         ViewDaftar viewDaftar = new ViewDaftar(controllerUser);
         ViewLogin viewLogin = new ViewLogin(controllerLogin); 

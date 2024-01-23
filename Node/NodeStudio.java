@@ -29,8 +29,8 @@ public class NodeStudio {
         return this.jumlahKursi;
     }
 
-    public void addFilm (Film film){
-        this.films.add(film);
+    public void addFilm (String jamTayang, int id, String namaFilm, int jumlahBookingKursi){
+        this.films.add(new Film(jamTayang, id, namaFilm, jumlahBookingKursi, this.jumlahKursi));
     }
     
     public void setFilm (ArrayList<Film> films){
@@ -42,24 +42,29 @@ public class NodeStudio {
     }
 
     public static class Film {
-        private boolean statusTayang;
+        private String jamTayang;
         private int id;
         private String namaFilm;
         private int jumlahBookingKursi;
+        private ArrayList<NodeKursi> listKursi;
     
-        public Film (int id, String namaFilm, int jumlahBookingKursi){
-            this.statusTayang = false;
+        public Film (String jamTayang, int id, String namaFilm, int jumlahBookingKursi, int jumlahKursi){
+            this.jamTayang = jamTayang;
             this.id = id;
             this.namaFilm = namaFilm;
             this.jumlahBookingKursi = jumlahBookingKursi;
+            this.listKursi = new ArrayList<NodeKursi>();
+            for (int i = 1; i <= jumlahKursi; i++) {
+                this.listKursi.add(new NodeKursi(i));
+            }
         }
 
-        public void setStatusTayang (boolean statusTayang){
-            this.statusTayang = statusTayang;
+        public void setJamTayang (String jamTayang){
+            this.jamTayang = jamTayang;
         }
 
-        public boolean getStatusTayang (){
-            return this.statusTayang;
+        public String getJamTayang (){
+            return this.jamTayang;
         }
         
         public void setId (int id){
@@ -86,5 +91,12 @@ public class NodeStudio {
             return this.jumlahBookingKursi;
         }
 
+        public void setStatusKursi (ArrayList<NodeKursi> kursi){
+            this.listKursi = kursi;
+        }
+    
+        public ArrayList<NodeKursi> getAllKursi (){
+            return this.listKursi;
+        }
     }
 }

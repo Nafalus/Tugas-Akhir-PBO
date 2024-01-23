@@ -1,18 +1,22 @@
 package Model;
 
+import java.io.File;
 import java.util.ArrayList;
 
 import com.google.gson.reflect.TypeToken;
 
 import Node.NodeStudio;
+import Node.NodeStudio.Film;
 import ModelGSON.ModelGSON;
 
 public class ModelStudio {
     private ArrayList<NodeStudio> listStudio;
+    private ArrayList<Film> listFilm;
     private ModelGSON<NodeStudio> modelGSONStudio;
 
     public ModelStudio (){
         listStudio = new ArrayList<>();
+        listFilm = new ArrayList<>();
         modelGSONStudio = new ModelGSON<NodeStudio>("Database/DatabaseStudio.json");
         loadData();
     }
@@ -31,8 +35,34 @@ public class ModelStudio {
         return null;
     }
 
-    public ArrayList<NodeStudio> getAllStudio(){
+    public Film searchFilm (String namaFilm){
+        for (Film film : listFilm) {
+            if (film.getNamaFilm().equalsIgnoreCase(namaFilm)) {
+                return film;                
+            }
+        }
+        return null;
+    }
+
+    public int getLastIdFilm (int idStudio){
+        NodeStudio studio = searchStudio(idStudio);
+        if (studio.getAllFilm() != null) {
+            int lasId = 0;
+            for (Film film : studio.getAllFilm()) {
+                lasId = film.getId();
+            }
+            return lasId;            
+        } else {
+            return 0;
+        }
+    }
+
+    public ArrayList<NodeStudio> getAllStudio (){
         return this.listStudio;
+    }
+
+    public ArrayList<Film> getAllFilm (){
+        return this.listFilm;
     }
 
     public void updateStudio (NodeStudio studio){
@@ -47,6 +77,9 @@ public class ModelStudio {
 
     private void loadData (){
         listStudio = modelGSONStudio.readFromFile(new TypeToken<ArrayList<NodeStudio>>() {}.getType());
+        for (NodeStudio studio : listStudio) {
+            listFilm.addAll(studio.getAllFilm());
+        }
     }
 
     private void Commit (){
