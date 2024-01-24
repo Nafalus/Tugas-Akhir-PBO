@@ -1,6 +1,5 @@
 package Model;
 
-import java.io.File;
 import java.util.ArrayList;
 
 import com.google.gson.reflect.TypeToken;
@@ -36,6 +35,7 @@ public class ModelStudio {
     }
 
     public Film searchFilm (String namaFilm){
+        loadData();
         for (Film film : listFilm) {
             if (film.getNamaFilm().equalsIgnoreCase(namaFilm)) {
                 return film;                
@@ -62,6 +62,7 @@ public class ModelStudio {
     }
 
     public ArrayList<Film> getAllFilm (){
+        loadData();
         return this.listFilm;
     }
 
@@ -76,9 +77,10 @@ public class ModelStudio {
     }
 
     private void loadData (){
-        listStudio = modelGSONStudio.readFromFile(new TypeToken<ArrayList<NodeStudio>>() {}.getType());
+        this.listStudio = modelGSONStudio.readFromFile(new TypeToken<ArrayList<NodeStudio>>() {}.getType());
+        this.listFilm = new ArrayList<>();
         for (NodeStudio studio : listStudio) {
-            listFilm.addAll(studio.getAllFilm());
+            this.listFilm.addAll(studio.getAllFilm());
         }
     }
 

@@ -22,13 +22,13 @@ public class ViewAdmin {
             System.out.println("--------------------------------");
             System.out.println("|\tMenu Admin\t\t");
             System.out.println("--------------------------------");
-            System.out.println("|1. Tambah Studio\t\t\t");
-            System.out.println("|2. Lihat Studio\t\t\t");
-            System.out.println("|3. Cari Film\t\t\t");
-            System.out.println("|4. Tambah Film\t\t");
-            System.out.println("|5. Lihat Film\t\t");
-            System.out.println("|6. Lihat List User\t");
-            System.out.println("|99. Logout\t\t\t");
+            System.out.println("|1. Tambah Studio");
+            System.out.println("|2. Lihat Studio");
+            System.out.println("|3. Cari Film");
+            System.out.println("|4. Tambah Film");
+            System.out.println("|5. Lihat Film");
+            System.out.println("|6. Lihat List User");
+            System.out.println("|99. Logout");
             System.out.println("--------------------------------");
             System.out.print("Masukkan Pilihan : "); pilih = input.nextInt();
             System.out.println("--------------------------------");
@@ -76,20 +76,24 @@ public class ViewAdmin {
                     System.out.println(" - Tambah Film -");
                     System.out.print("Masukkan Nomer Studio : "); int nomerStudio = input.nextInt();
                     input.nextLine();
-                    System.out.print("Masukkan Nama Film : "); namaFilm = input.nextLine();
-                    System.out.println(" - Masukkan Jam Tayang -");
-                    System.out.print("Jam : "); String jam = input.nextLine();
-                    System.out.print("Menit : "); String menit = input.nextLine();
-                    System.out.print("Hari : "); String hari = input.nextLine();
-                    System.out.print("Bulan : "); String bulan = input.nextLine();
-                    System.out.print("Tahun "); String tahun = input.nextLine();
-                    String tanggal = tahun + "-" + bulan + "-" + hari + " " + jam + ":" + menit;
-                    controllerStudio.insertFilm(nomerStudio, tanggal, namaFilm);
+                    if (controllerStudio.searchStudio(nomerStudio) != null) {
+                        System.out.print("Masukkan Nama Film : "); namaFilm = input.nextLine();
+                        System.out.println(" - Masukkan Jam Tayang -");
+                        System.out.print("Jam : "); String jam = input.nextLine();
+                        System.out.print("Menit : "); String menit = input.nextLine();
+                        System.out.print("Hari : "); String hari = input.nextLine();
+                        System.out.print("Bulan : "); String bulan = input.nextLine();
+                        System.out.print("Tahun : "); String tahun = input.nextLine();
+                        controllerStudio.insertFilm(nomerStudio, jam, menit, hari, bulan, tahun, namaFilm);
+                    } else {
+                        System.out.println("!!! Studio Tidak Ditemukan !!!");
+                    }
                     break;
                 case 5:
                     System.out.println(" - Menampilkan Semua Film -");
                     for (Film film : controllerStudio.viewAllFilm()) {
                         System.out.println(" => " + film.getNamaFilm());
+                        System.out.println("    " + film.getJamTayang());
                     }
                     break;
                 case 6:

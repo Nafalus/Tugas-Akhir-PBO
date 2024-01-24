@@ -4,7 +4,7 @@
     "jumlahKursi": 10,
     "films": [
       {
-        "jamTayang": "2024-4-3 12:30",
+        "jamTayang": "2024-04-03 12:30",
         "id": 1,
         "namaFilm": "cinta tak terbalas",
         "jumlahBookingKursi": 0,
@@ -52,9 +52,57 @@
         ]
       },
       {
-        "jamTayang": "2024-4-3 19:00",
+        "jamTayang": "2024-04-03 19:00",
         "id": 2,
         "namaFilm": "avenger",
+        "jumlahBookingKursi": 0,
+        "listKursi": [
+          {
+            "id": 1,
+            "statusKursi": false
+          },
+          {
+            "id": 2,
+            "statusKursi": false
+          },
+          {
+            "id": 3,
+            "statusKursi": false
+          },
+          {
+            "id": 4,
+            "statusKursi": false
+          },
+          {
+            "id": 5,
+            "statusKursi": false
+          },
+          {
+            "id": 6,
+            "statusKursi": false
+          },
+          {
+            "id": 7,
+            "statusKursi": false
+          },
+          {
+            "id": 8,
+            "statusKursi": false
+          },
+          {
+            "id": 9,
+            "statusKursi": false
+          },
+          {
+            "id": 10,
+            "statusKursi": false
+          }
+        ]
+      },
+      {
+        "jamTayang": "2024-01-24 23:25",
+        "id": 3,
+        "namaFilm": "The Conjuring",
         "jumlahBookingKursi": 0,
         "listKursi": [
           {
@@ -106,7 +154,7 @@
     "jumlahKursi": 5,
     "films": [
       {
-        "jamTayang": "2024-1-20 15:20",
+        "jamTayang": "2024-01-24 22:35",
         "id": 1,
         "namaFilm": "puncak komedi",
         "jumlahBookingKursi": 0,
