@@ -8,7 +8,7 @@ FITUR:
 - Pengunjung hanya dapat melihat Film yang sedang tayang (Done)
 - Pengunjung hanya dapat memesan Tiket (Film) yang sedang tayang (Done)
 - Pengunjung dapat mencari film berdasarkan judul film (Done)
-- melihat detail transaksi ( nama Pengunjung, film, jam tayang, studio )
+- melihat detail transaksi ( nama Pengunjung, film, jam tayang, studio ) (Done)
 
 POIN UTAMA:
 - Dapat menerapkan Naming Conventions dengan Baik
