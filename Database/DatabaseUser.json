@@ -1,11 +1,37 @@
 [
   {
-    "listTransaksi": [],
+    "listTransaksi": [
+      {
+        "Tanggal": "25 Januari 2024 20:11:56",
+        "namaFilm": "John Wick",
+        "idStudio": 2,
+        "idKursi": 4
+      },
+      {
+        "Tanggal": "25 Januari 2024 20:12:58",
+        "namaFilm": "John Wick",
+        "idStudio": 2,
+        "idKursi": 2
+      },
+      {
+        "Tanggal": "25 Januari 2024 20:34:07",
+        "namaFilm": "John Wick",
+        "idStudio": 2,
+        "idKursi": 3
+      }
+    ],
     "nama": "gendy",
     "pass": "hayo123"
   },
   {
-    "listTransaksi": [],
+    "listTransaksi": [
+      {
+        "Tanggal": "25 Januari 2024 20:45:15",
+        "namaFilm": "Who Am I",
+        "idStudio": 2,
+        "idKursi": 4
+      }
+    ],
     "nama": "ilyas",
     "pass": "wibu123"
   }

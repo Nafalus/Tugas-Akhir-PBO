@@ -36,8 +36,10 @@ public class ModelUser {
         return this.listUser;
     }
 
+    
+
     public void updateUser (NodeUser user){
-        this.listUser.remove(user);
+        this.listUser.contains(user);
         Commit();
     }
 

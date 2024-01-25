@@ -8,7 +8,6 @@
         "jamTayang": "2024-04-03 12:30",
         "id": 1,
         "namaFilm": "cinta tak terbalas",
-        "jumlahBookingKursi": 0,
         "listKursi": [
           {
             "id": 1,
@@ -57,7 +56,6 @@
         "jamTayang": "2024-01-25 11:25",
         "id": 2,
         "namaFilm": "avenger",
-        "jumlahBookingKursi": 0,
         "listKursi": [
           {
             "id": 1,
@@ -106,7 +104,6 @@
         "jamTayang": "2024-01-24 23:25",
         "id": 3,
         "namaFilm": "The Conjuring",
-        "jumlahBookingKursi": 0,
         "listKursi": [
           {
             "id": 1,
@@ -161,7 +158,6 @@
         "jamTayang": "2024-01-24 22:35",
         "id": 1,
         "namaFilm": "puncak komedi",
-        "jumlahBookingKursi": 0,
         "listKursi": [
           {
             "id": 1,
@@ -178,6 +174,62 @@
           {
             "id": 4,
             "statusKursi": false
+          },
+          {
+            "id": 5,
+            "statusKursi": false
+          }
+        ]
+      },
+      {
+        "nomerStudio": 2,
+        "jamTayang": "2024-01-25 20:10",
+        "id": 2,
+        "namaFilm": "John Wick",
+        "listKursi": [
+          {
+            "id": 1,
+            "statusKursi": false
+          },
+          {
+            "id": 2,
+            "statusKursi": true
+          },
+          {
+            "id": 3,
+            "statusKursi": true
+          },
+          {
+            "id": 4,
+            "statusKursi": true
+          },
+          {
+            "id": 5,
+            "statusKursi": false
+          }
+        ]
+      },
+      {
+        "nomerStudio": 2,
+        "jamTayang": "2024-01-25 20:45",
+        "id": 3,
+        "namaFilm": "Who Am I",
+        "listKursi": [
+          {
+            "id": 1,
+            "statusKursi": false
+          },
+          {
+            "id": 2,
+            "statusKursi": false
+          },
+          {
+            "id": 3,
+            "statusKursi": false
+          },
+          {
+            "id": 4,
+            "statusKursi": true
           },
           {
             "id": 5,

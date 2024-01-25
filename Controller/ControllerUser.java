@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import Model.*;
 import Node.*;
 import Node.NodeStudio.Film;
+import Node.NodeUser.Transaksi;
 
 public class ControllerUser {
     private ModelUser modelUser;
@@ -19,6 +20,10 @@ public class ControllerUser {
 
     public ArrayList<NodeUser> viewAllUser (){
         return modelUser.getAllUser();
+    }
+
+    public NodeUser searchUser (String nama){
+        return modelUser.searchUser(nama);
     }
 
     public void insertUser (String nama, String pass){
@@ -58,5 +63,7 @@ public class ControllerUser {
         listFilm.set(film.getId() - 1, film);
         studio.setFilm(listFilm);
         modelStudio.updateStudio(studio);
+        user.addTransaksi(new Transaksi(film.getNamaFilm(), studio.getNomerStudio(), idKursi));
+        modelUser.updateUser(user);
     }
 }

@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 import Controller.*;
 import Node.NodeKursi;
+import Node.NodeUser;
+import Node.NodeUser.Transaksi;
 import Node.NodeStudio.Film;
 
 public class ViewUser {
@@ -35,7 +37,7 @@ public class ViewUser {
             switch (pilih) {
                 case 1:
                     System.out.println(" - Lihat Semua Film -");
-                    if (controllerStudio.viewAllFilmTayang() != null) {
+                    if (controllerStudio.viewAllFilmTayang().size() != 0) {
                         for (Film film : controllerStudio.viewAllFilmTayang()) {
                             System.out.println(" => " + film.getNamaFilm());
                         }
@@ -72,7 +74,16 @@ public class ViewUser {
                     }
                     break;
                 case 3:
-                    System.out.println("!!! Ini Histori Transaksi !!!");
+                    NodeUser user = controllerUser.searchUser(nama);
+                    System.out.println(" - Histori Transaksi Pengguna " + user.getNama() + " -");
+                    for (Transaksi transaksi : user.getAllTransaksi()) {
+                        Film film = controllerStudio.searchFilm(transaksi.getNamaFilm());
+                        System.out.println("Nama Film : " + transaksi.getNamaFilm());
+                        System.out.println("Jam Tayang Film : " + film.getJamTayang());
+                        System.out.println("Nomer Studio : " + transaksi.getIdStudio());
+                        System.out.println("Nomer Kursi : " + transaksi.getIdKursi());
+                        System.out.println("=========================");
+                    }
                     break;
                 case 99:
                     System.out.println(" - Anda Telah Logout -");

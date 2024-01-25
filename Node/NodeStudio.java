@@ -29,8 +29,8 @@ public class NodeStudio {
         return this.jumlahKursi;
     }
 
-    public void addFilm (String jamTayang, int id, String namaFilm, int jumlahBookingKursi){
-        this.films.add(new Film(this.nomerStudio, jamTayang, id, namaFilm, jumlahBookingKursi, this.jumlahKursi));
+    public void addFilm (String jamTayang, int id, String namaFilm){
+        this.films.add(new Film(this.nomerStudio, jamTayang, id, namaFilm, this.jumlahKursi));
     }
     
     public void setFilm (ArrayList<Film> films){
@@ -46,15 +46,13 @@ public class NodeStudio {
         private String jamTayang;
         private int id;
         private String namaFilm;
-        private int jumlahBookingKursi;
         private ArrayList<NodeKursi> listKursi;
     
-        public Film (int nomerStudio, String jamTayang, int id, String namaFilm, int jumlahBookingKursi, int jumlahKursi){
+        public Film (int nomerStudio, String jamTayang, int id, String namaFilm, int jumlahKursi){
             this.nomerStudio = nomerStudio;
             this.jamTayang = jamTayang;
             this.id = id;
             this.namaFilm = namaFilm;
-            this.jumlahBookingKursi = jumlahBookingKursi;
             this.listKursi = new ArrayList<NodeKursi>();
             for (int i = 1; i <= jumlahKursi; i++) {
                 this.listKursi.add(new NodeKursi(i));
@@ -87,14 +85,6 @@ public class NodeStudio {
 
         public String getNamaFilm (){
             return this.namaFilm;
-        }
-
-        public void setJumlahBookingKursi (int jumlahBookingKursi){
-            this.jumlahBookingKursi = jumlahBookingKursi;
-        }
-
-        public int getJumlagBookingKursi (){
-            return this.jumlahBookingKursi;
         }
 
         public void setStatusKursi (ArrayList<NodeKursi> kursi){

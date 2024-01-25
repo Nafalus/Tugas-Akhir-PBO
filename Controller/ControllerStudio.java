@@ -85,7 +85,7 @@ public class ControllerStudio {
 
         String jamTayang = Tahun + "-" + Bulan + "-" + Hari + " " + Jam + ":" + Menit;
         if (studio != null) {
-            studio.addFilm(jamTayang, modelStudio.getLastIdFilm(nomerStudio) + 1, namaFilm, 0);
+            studio.addFilm(jamTayang, modelStudio.getLastIdFilm(nomerStudio) + 1, namaFilm);
             modelStudio.updateStudio(studio);
         } else {
             System.out.println("!!! Studio Tidak Ditemukan !!!");

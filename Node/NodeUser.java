@@ -23,15 +23,15 @@ public class NodeUser extends NodeAdmin {
 
     public static class Transaksi {
         private String Tanggal;
-        private String namaUser;
         private String namaFilm;
         private int idStudio;
+        private int idKursi;
 
-        public Transaksi (String namaUser, String namaFilm, int idStudio){
+        public Transaksi (String namaFilm, int idStudio, int idKursi){
             this.Tanggal = setTanggal();
-            this.namaUser = namaUser;
             this.namaFilm = namaFilm;
             this.idStudio = idStudio;
+            this.idKursi = idKursi;
         }
 
         private String setTanggal () {
@@ -44,16 +44,16 @@ public class NodeUser extends NodeAdmin {
             return this.Tanggal;
         }
 
-        public String getNamaUser (){
-            return this.namaUser;
-        }
-
         public String getNamaFilm (){
             return this.namaFilm;
         }
 
         public int getIdStudio (){
             return this.idStudio;
+        }
+
+        public int getIdKursi (){
+            return this.idKursi;
         }
     }
 }
