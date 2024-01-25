@@ -6,8 +6,8 @@ FITUR:
 - Admin dapat menambahkan Film yang tayang (Film, Jam tayang, Studio) (Done)
 - Login Pengunjung (Done)
 - Pengunjung hanya dapat melihat Film yang sedang tayang (Done)
-- Pengunjung hanya dapat memesan Tiket (Film) yang sedang tayang
-- Pengunjung dapat mencari film berdasarkan judul film
+- Pengunjung hanya dapat memesan Tiket (Film) yang sedang tayang (Done)
+- Pengunjung dapat mencari film berdasarkan judul film (Done)
 - melihat detail transaksi ( nama Pengunjung, film, jam tayang, studio )
 
 POIN UTAMA:
