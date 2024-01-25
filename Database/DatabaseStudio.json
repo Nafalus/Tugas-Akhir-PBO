@@ -4,6 +4,7 @@
     "jumlahKursi": 10,
     "films": [
       {
+        "nomerStudio": 1,
         "jamTayang": "2024-04-03 12:30",
         "id": 1,
         "namaFilm": "cinta tak terbalas",
@@ -52,7 +53,8 @@
         ]
       },
       {
-        "jamTayang": "2024-04-03 19:00",
+        "nomerStudio": 1,
+        "jamTayang": "2024-01-25 11:25",
         "id": 2,
         "namaFilm": "avenger",
         "jumlahBookingKursi": 0,
@@ -67,7 +69,7 @@
           },
           {
             "id": 3,
-            "statusKursi": false
+            "statusKursi": true
           },
           {
             "id": 4,
@@ -100,6 +102,7 @@
         ]
       },
       {
+        "nomerStudio": 1,
         "jamTayang": "2024-01-24 23:25",
         "id": 3,
         "namaFilm": "The Conjuring",
@@ -154,6 +157,7 @@
     "jumlahKursi": 5,
     "films": [
       {
+        "nomerStudio": 2,
         "jamTayang": "2024-01-24 22:35",
         "id": 1,
         "namaFilm": "puncak komedi",

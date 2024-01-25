@@ -2,14 +2,19 @@ package Controller;
 
 import java.util.ArrayList;
 
-import Model.ModelUser;
-import Node.NodeUser;
+import Model.*;
+import Node.*;
+import Node.NodeStudio.Film;
 
 public class ControllerUser {
     private ModelUser modelUser;
+    private ModelStudio modelStudio;
+    private ControllerStudio controllerStudio;
 
-    public ControllerUser (ModelUser modelUser){
+    public ControllerUser (ModelUser modelUser, ModelStudio modelStudio, ControllerStudio controllerStudio){
         this.modelUser = modelUser;
+        this.modelStudio = modelStudio;
+        this.controllerStudio = controllerStudio;
     }
 
     public ArrayList<NodeUser> viewAllUser (){
@@ -37,5 +42,21 @@ public class ControllerUser {
         } else {
             modelUser.deleteUser(user);
         }
+    }
+
+    public void PesanTiket (String nama, Film film, int idKursi){
+        NodeUser user = modelUser.searchUser(nama);
+        NodeStudio studio = controllerStudio.searchStudio(film.getNomerStudio());
+        ArrayList<Film> listFilm = studio.getAllFilm();
+        ArrayList<NodeKursi> listKursi = film.getAllKursi();
+        for (NodeKursi kursi : listKursi) {
+            if (kursi.getId() == idKursi) {
+                kursi.setStatusKursi(true);
+            }
+        }
+        film.setStatusKursi(listKursi);
+        listFilm.set(film.getId() - 1, film);
+        studio.setFilm(listFilm);
+        modelStudio.updateStudio(studio);
     }
 }

@@ -23,7 +23,7 @@ public class ViewUser {
             System.out.println("|\tMenu User\t\t");
             System.out.println("--------------------------------");
             System.out.println("|1. Lihat Film");
-            System.out.println("|2. Cari Film");
+            System.out.println("|2. Pesan Tiket");
             System.out.println("|3. Histori Transaksi");
             System.out.println("|4. ");
             System.out.println("|5. ");
@@ -47,7 +47,7 @@ public class ViewUser {
                     input.nextLine();
                     System.out.println(" - Cari Film -");
                     System.out.print("Masukkan Nama Film : "); String namaFilm = input.nextLine();
-                    Film filmSearch = controllerStudio.searchFilm(namaFilm);
+                    Film filmSearch = controllerStudio.searchFilmTayang(namaFilm);
                     if (filmSearch != null) {
                         System.out.println("Nama Film : " + filmSearch.getNamaFilm());
                         System.out.println("Jam Tayang : " + filmSearch.getJamTayang());
@@ -60,10 +60,19 @@ public class ViewUser {
                                 System.out.println("Kursi Masih Kosong!!!");
                             }
                             System.out.println("----------------------");
-                        }                        
+                        }
+                        System.out.print("Pilih Kursi yang ingin DiPesan : "); int pilihKursi = input.nextInt();
+                        if (controllerStudio.cekStatusKursi(namaFilm, pilihKursi) == false) {
+                            controllerUser.PesanTiket(nama, filmSearch, pilihKursi);
+                        } else {
+                            System.out.println("!!! Kursi Telah Dipesan !!!");
+                        }
                     } else {
                         System.out.println("Film Tidak Ditemukan!!!");
                     }
+                    break;
+                case 3:
+                    System.out.println("!!! Ini Histori Transaksi !!!");
                     break;
                 case 99:
                     System.out.println(" - Anda Telah Logout -");

@@ -27,7 +27,8 @@ public class ViewAdmin {
             System.out.println("|3. Cari Film");
             System.out.println("|4. Tambah Film");
             System.out.println("|5. Lihat Film");
-            System.out.println("|6. Lihat List User");
+            System.out.println("|6. Update Jam Tayang Film");
+            System.out.println("|7. Lihat List User");
             System.out.println("|99. Logout");
             System.out.println("--------------------------------");
             System.out.print("Masukkan Pilihan : "); pilih = input.nextInt();
@@ -97,6 +98,22 @@ public class ViewAdmin {
                     }
                     break;
                 case 6:
+                    System.out.println(" - Update jam Tayang Film -");
+                    input.nextLine();
+                    System.out.print("Masukkan Nama Film : "); namaFilm = input.nextLine();
+                    if (controllerStudio.searchFilm(namaFilm) != null) {
+                        System.out.println(" - Masukkan Jam Tayang -");
+                        System.out.print("Jam : "); String jam = input.nextLine();
+                        System.out.print("Menit : "); String menit = input.nextLine();
+                        System.out.print("Hari : "); String hari = input.nextLine();
+                        System.out.print("Bulan : "); String bulan = input.nextLine();
+                        System.out.print("Tahun : "); String tahun = input.nextLine();
+                        controllerStudio.updateFilm(namaFilm, jam, menit, hari, bulan, tahun);
+                    } else {
+                        System.out.println("!!! Film Tidak Ditemukan !!!");
+                    }
+                    break;
+                case 7:
                     System.out.println(" - Menampilkan List User");
                     for (NodeUser user : controllerUser.viewAllUser()) {
                         System.out.println(" => " + user.getNama());

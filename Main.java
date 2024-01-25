@@ -10,8 +10,8 @@ public class Main {
         ModelUser modelUser = new ModelUser();
         ModelStudio modelStudio = new ModelStudio();
         ControllerAdmin controllerAdmin = new ControllerAdmin(modelAdmin);
-        ControllerUser controllerUser = new ControllerUser(modelUser);
         ControllerStudio controllerStudio = new ControllerStudio(modelStudio);
+        ControllerUser controllerUser = new ControllerUser(modelUser, modelStudio, controllerStudio);
         ViewAdmin viewAdmin = new ViewAdmin(controllerStudio, controllerUser);
         ViewUser viewUser = new ViewUser(controllerUser, controllerStudio);
         ControllerLogin controllerLogin = new ControllerLogin(viewAdmin, viewUser);
