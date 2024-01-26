@@ -27,9 +27,6 @@ public class ViewUser {
             System.out.println("|1. Lihat Film");
             System.out.println("|2. Pesan Tiket");
             System.out.println("|3. Histori Transaksi");
-            System.out.println("|4. ");
-            System.out.println("|5. ");
-            System.out.println("|6. ");
             System.out.println("|99. Logout\t\t\t");
             System.out.println("--------------------------------");
             System.out.print("Masukkan Pilihan : "); pilih = input.nextInt();

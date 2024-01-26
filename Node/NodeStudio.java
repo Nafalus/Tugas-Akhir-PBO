@@ -94,5 +94,16 @@ public class NodeStudio {
         public ArrayList<NodeKursi> getAllKursi (){
             return this.listKursi;
         }
+
+        public int getTotalKursi (){
+            return this.listKursi.size();
+        }
+
+        public void resetListKursi (int jumlahKursi){
+            this.listKursi = new ArrayList<NodeKursi>();
+            for (int i = 1; i <= jumlahKursi; i++) {
+                this.listKursi.add(new NodeKursi(i));
+            }
+        }
     }
 }

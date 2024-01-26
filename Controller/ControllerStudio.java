@@ -112,6 +112,7 @@ public class ControllerStudio {
         String jamTayang = Tahun + "-" + Bulan + "-" + Hari + " " + Jam + ":" + Menit;
         if (film != null) {
             film.setJamTayang(jamTayang);
+            film.resetListKursi(film.getTotalKursi());
             NodeStudio studio = searchStudio(film.getNomerStudio());
             ArrayList<Film> listFilm = studio.getAllFilm();
             listFilm.set(film.getId() - 1, film);

@@ -5,7 +5,7 @@
     "films": [
       {
         "nomerStudio": 1,
-        "jamTayang": "2024-04-03 12:30",
+        "jamTayang": "2024-01-26 06:55",
         "id": 1,
         "namaFilm": "cinta tak terbalas",
         "listKursi": [
@@ -53,7 +53,7 @@
       },
       {
         "nomerStudio": 1,
-        "jamTayang": "2024-01-25 11:25",
+        "jamTayang": "2024-01-26 06:55",
         "id": 2,
         "namaFilm": "avenger",
         "listKursi": [
@@ -67,7 +67,7 @@
           },
           {
             "id": 3,
-            "statusKursi": true
+            "statusKursi": false
           },
           {
             "id": 4,
@@ -183,7 +183,7 @@
       },
       {
         "nomerStudio": 2,
-        "jamTayang": "2024-01-25 20:10",
+        "jamTayang": "2024-01-26 06:55",
         "id": 2,
         "namaFilm": "John Wick",
         "listKursi": [
@@ -193,11 +193,11 @@
           },
           {
             "id": 2,
-            "statusKursi": true
+            "statusKursi": false
           },
           {
             "id": 3,
-            "statusKursi": true
+            "statusKursi": false
           },
           {
             "id": 4,
