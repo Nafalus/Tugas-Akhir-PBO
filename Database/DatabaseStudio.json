@@ -53,7 +53,7 @@
       },
       {
         "nomerStudio": 1,
-        "jamTayang": "2024-01-26 06:55",
+        "jamTayang": "2024-01-26 15:00",
         "id": 2,
         "namaFilm": "avenger",
         "listKursi": [
@@ -101,7 +101,7 @@
       },
       {
         "nomerStudio": 1,
-        "jamTayang": "2024-01-24 23:25",
+        "jamTayang": "2024-01-26 13:45",
         "id": 3,
         "namaFilm": "The Conjuring",
         "listKursi": [
@@ -139,7 +139,7 @@
           },
           {
             "id": 9,
-            "statusKursi": false
+            "statusKursi": true
           },
           {
             "id": 10,

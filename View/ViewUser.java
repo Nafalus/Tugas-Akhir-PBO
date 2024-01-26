@@ -63,6 +63,7 @@ public class ViewUser {
                         System.out.print("Pilih Kursi yang ingin DiPesan : "); int pilihKursi = input.nextInt();
                         if (controllerStudio.cekStatusKursi(namaFilm, pilihKursi) == false) {
                             controllerUser.PesanTiket(nama, filmSearch, pilihKursi);
+                            System.out.println("!!! Pemesanan Tiket Berhasil !!!");
                         } else {
                             System.out.println("!!! Kursi Telah Dipesan !!!");
                         }

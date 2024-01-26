@@ -1,5 +1,7 @@
 [
   {
+    "nama": "gendy",
+    "pass": "hayo123",
     "listTransaksi": [
       {
         "Tanggal": "25 Januari 2024 20:11:56",
@@ -18,12 +20,18 @@
         "namaFilm": "John Wick",
         "idStudio": 2,
         "idKursi": 3
+      },
+      {
+        "Tanggal": "26 Januari 2024 12:58:43",
+        "namaFilm": "avenger",
+        "idStudio": 1,
+        "idKursi": 6
       }
-    ],
-    "nama": "gendy",
-    "pass": "hayo123"
+    ]
   },
   {
+    "nama": "ilyas",
+    "pass": "wibu123",
     "listTransaksi": [
       {
         "Tanggal": "25 Januari 2024 20:45:15",
@@ -36,9 +44,25 @@
         "namaFilm": "John Wick",
         "idStudio": 2,
         "idKursi": 4
+      },
+      {
+        "Tanggal": "26 Januari 2024 12:59:30",
+        "namaFilm": "avenger",
+        "idStudio": 1,
+        "idKursi": 9
       }
-    ],
-    "nama": "ilyas",
-    "pass": "wibu123"
+    ]
+  },
+  {
+    "nama": "Reyhan",
+    "pass": "asdasd",
+    "listTransaksi": [
+      {
+        "Tanggal": "26 Januari 2024 13:45:25",
+        "namaFilm": "The Conjuring",
+        "idStudio": 1,
+        "idKursi": 9
+      }
+    ]
   }
 ]

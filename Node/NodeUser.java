@@ -5,12 +5,33 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class NodeUser extends NodeAdmin {
+import Abstraction.abstractionUser;
+
+public class NodeUser extends abstractionUser {
+    private String nama;
+    private String pass;
     ArrayList<Transaksi> listTransaksi;
 
     public NodeUser (String nama, String pass){
-        super(nama, pass);
+        this.nama = nama;
+        this.pass = pass;
         this.listTransaksi = new ArrayList<>();
+    }
+
+    public void setNama (String nama){
+        this.nama = nama;
+    }
+
+    public String getNama (){
+        return this.nama;
+    }
+
+    public void setPassword (String pass){
+        this.pass = pass;
+    }
+
+    public String getPassword(){
+        return this.pass;
     }
 
     public void addTransaksi (Transaksi transaksi){

@@ -1,6 +1,8 @@
 package Node;
 
-public class NodeAdmin {
+import Abstraction.abstractionUser;
+
+public class NodeAdmin extends abstractionUser{
     private String nama;
     private String pass;
 
