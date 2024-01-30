@@ -183,7 +183,7 @@
       },
       {
         "nomerStudio": 2,
-        "jamTayang": "2024-01-26 06:55",
+        "jamTayang": "2024-01-26 16:10",
         "id": 2,
         "namaFilm": "John Wick",
         "listKursi": [
@@ -193,7 +193,7 @@
           },
           {
             "id": 2,
-            "statusKursi": false
+            "statusKursi": true
           },
           {
             "id": 3,
@@ -201,11 +201,11 @@
           },
           {
             "id": 4,
-            "statusKursi": true
+            "statusKursi": false
           },
           {
             "id": 5,
-            "statusKursi": false
+            "statusKursi": true
           }
         ]
       },
@@ -233,6 +233,80 @@
           },
           {
             "id": 5,
+            "statusKursi": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "nomerStudio": 3,
+    "jumlahKursi": 15,
+    "films": [
+      {
+        "nomerStudio": 3,
+        "jamTayang": "2024-01-26 04:00",
+        "id": 1,
+        "namaFilm": "Siksa Neraka",
+        "listKursi": [
+          {
+            "id": 1,
+            "statusKursi": false
+          },
+          {
+            "id": 2,
+            "statusKursi": false
+          },
+          {
+            "id": 3,
+            "statusKursi": false
+          },
+          {
+            "id": 4,
+            "statusKursi": false
+          },
+          {
+            "id": 5,
+            "statusKursi": false
+          },
+          {
+            "id": 6,
+            "statusKursi": false
+          },
+          {
+            "id": 7,
+            "statusKursi": false
+          },
+          {
+            "id": 8,
+            "statusKursi": false
+          },
+          {
+            "id": 9,
+            "statusKursi": false
+          },
+          {
+            "id": 10,
+            "statusKursi": false
+          },
+          {
+            "id": 11,
+            "statusKursi": false
+          },
+          {
+            "id": 12,
+            "statusKursi": false
+          },
+          {
+            "id": 13,
+            "statusKursi": false
+          },
+          {
+            "id": 14,
+            "statusKursi": false
+          },
+          {
+            "id": 15,
             "statusKursi": false
           }
         ]

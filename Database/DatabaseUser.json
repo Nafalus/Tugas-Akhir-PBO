@@ -50,6 +50,18 @@
         "namaFilm": "avenger",
         "idStudio": 1,
         "idKursi": 9
+      },
+      {
+        "Tanggal": "26 Januari 2024 16:17:34",
+        "namaFilm": "John Wick",
+        "idStudio": 2,
+        "idKursi": 2
+      },
+      {
+        "Tanggal": "26 Januari 2024 16:17:43",
+        "namaFilm": "John Wick",
+        "idStudio": 2,
+        "idKursi": 5
       }
     ]
   },
