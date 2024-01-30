@@ -76,5 +76,17 @@
         "idKursi": 9
       }
     ]
+  },
+  {
+    "nama": "aldi",
+    "pass": "aldi123",
+    "listTransaksi": [
+      {
+        "Tanggal": "30 Januari 2024 15:44:25",
+        "namaFilm": "Toy Story 4",
+        "idStudio": 4,
+        "idKursi": 3
+      }
+    ]
   }
 ]
